@@ -1,0 +1,198 @@
+/* General Reset */
+body, h1, h2, p, nav, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Dark background for contrast */
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between text and image */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+.text-content {
+    max-width: 60%; /* Ensure text doesn't overlap image */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #edf7f6;
+}
+
+h2 {
+    font-size: 2em;
+    color: #3299a8;
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    font-size: 1.2em;
+    color: #edf7f6;
+}
+
+/* Image Section */
+.image-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.image-container img {
+    border-radius: 50%; /* Rounded image */
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border: 10px solid rgb(0, 162, 255);
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+}
+
+/* Buttons */
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hire-me {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.hire-me:hover {
+    background: linear-gradient(135deg, #5b0f9b, #1f65d0);
+    transform: translateY(-3px);
+}
+
+.lets-talk {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.lets-talk:hover {
+    background: linear-gradient(135deg, #0f8470, #2cc86e);
+    transform: translateY(-3px);
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+/* Default layout for the profile: horizontal layout */
+.profile {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space out text and image */
+    margin-top: 20px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: row; /* Keep horizontal layout on smaller screens */
+        align-items: center; /* Center vertically */
+        text-align: left; /* Align text to the left if needed */
+    }
+
+    .text-content {
+        max-width: 60%;
+        text-align: left; /* Ensure text is aligned to the left */
+    }
+
+    .image-container {
+        text-align: right; /* Align the image to the right */
+    }
+
+    .image-container img {
+        width: 300px; /* Adjust the image size for smaller screens */
+        height: 300px; /* Maintain a consistent square aspect ratio */
+    }
+
+    .button-container {
+        justify-content: flex-start; /* Align buttons to the left */
+    }
+}
+
+/* Profile section for large screens (above 768px) */
+@media (min-width: 769px) {
+    .profile {
+        flex-direction: row; /* Ensure it's horizontal on large screens too */
+        align-items: center;
+        justify-content: space-between;
+    }
+    .image-container img {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        justify-content: center; /* Keeps the links horizontally centered either column or row */  
+    }
+
+    nav a {
+        padding: 8px; /* Adjust padding for smaller screens */
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+        white-space: nowrap; /* Prevents links from breaking into multiple lines */
+    }
+}
+
+
